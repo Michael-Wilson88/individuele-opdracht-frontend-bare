@@ -1,0 +1,48 @@
+h1 {
+    color: wheat;
+}
+body {
+    background-color: black;
+    color: wheat;
+    font-family: "OCR A Extended", fantasy;
+    line-height: 1.6em;
+}
+
+header {
+    background-color: black;
+    font-family: "OCR A Extended", fantasy;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 10px;
+}
+
+nav a {
+    font-family: "OCR A Extended", fantasy;
+    font-size: 24px;
+    text-decoration: none;
+    color: mediumpurple;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    cursor: pointer;
+}
