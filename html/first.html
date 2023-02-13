@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Music</title>
-    <link rel="stylesheet" type="text/css"
-          href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../javascript/pages.js"></script>
 </head>
 <body>
 <header>
     <nav>
-        <ul>
-            <li><a href="#first">Page 1</a></li>
-            <li><a href="#second">Page 2</a></li>
-            <li><a href="#third">Page 3</a></li>
+        <ul class="navbar">
+            <li class="nav-item">
+                <a href="first.html">Page 1</a>
+            </li>
+            <li class="nav-item">
+                <a href="second.html">Page 2</a>
+            </li>
+            <li class="nav-item">
+                <a href="third.html">Page 3</a>
+            </li>
         </ul>
     </nav>
 </header>
-<div>
-    <a href="../img/logo-primus.png">
-        <img src="../img/logo-primus.png" alt="Primus logo">
+<div class="image-container">
+    <a href="#">
+        <img src="../img/logo-primus.png" alt="Primus logo" class="image">
     </a>
+    <div class="details">Primus Sucks!</div>
 </div>
 <br>
-<div>
-    <a href="../img/qotsa-logo.jpg">
-        <img src="../img/qotsa-logo.jpg" alt="Queens of the Stoneage logo">
+<div class="image-container">
+    <a href="#">
+        <img src="../img/qotsa-logo.jpg" alt="Queens of the Stone Age logo" class="image">
     </a>
+    <div class="details" id="qotsaDetails"></div>
 </div>
 <br>
-<div>
-    <a href="../img/Conan_Logo_Red.webp">
-        <img src="../img/Conan_Logo_Red.webp" alt="Conan logo"
+<div class="image-container">
+    <a href="#">
+        <img src="../img/Conan_Logo_Red.webp" alt="Conan logo" class="image"
              height="120" width="240">
     </a>
+    <div class="details" id="conanDetails"></div>
 </div>
 <br>
-<div>
-    <a href="../img/kyuss.webp">
-        <img src="../img/kyuss.webp" alt="Kyuss logo"
-        height="75%" width="75%">
+<div class="image-container">
+    <a href="#">
+        <img src="../img/kyuss.webp" alt="Kyuss logo" class="image"
+        height="90" width="280">
     </a>
+    <div class="details" id="kyussDetails"></div>
 </div>
 <br>
-<div>
-    <a href="../img/peterpanspeedrock-logo.webp">
-        <img src="../img/peterpanspeedrock-logo.webp" alt="Peter Pan Speedrock logo">
+<div class="image-container">
+    <a href="#">
+        <img src="../img/peterpanspeedrock-logo.webp" alt="Peter Pan Speedrock logo" class="image">
     </a>
+    <div class="details" id="ppsrDetails"></div>
 </div>
 
 </body>
