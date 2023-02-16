@@ -2,7 +2,6 @@ h1 {
 }
 body {
     background-color: black;
-    /*color: wheat;*/
     font-family: "OCR A Extended", fantasy;
     line-height: 1.6em;
     text-align: center;
@@ -34,6 +33,16 @@ nav a {
     font-size: 20px;
     text-decoration: none;
     color: mediumpurple;
+    border: 1px solid black;
+}
+
+nav a:hover {
+    border: 1px solid mediumpurple;
+}
+
+nav a:active {
+    border: none;
+    text-decoration: underline;
 }
 
 table {
@@ -41,26 +50,35 @@ table {
     width: 100%;
 }
 
+.image-container {
+    display: inline-block;
+}
+
+.image-container img {
+    display: inline-block;
+    height: auto;
+}
+
 .image-container a {
     padding: 3px;
-    display: inline-flex;
+    display: inline-block;
     border: 3px solid black;
     transition: border 0.2s ease-in-out;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+.detail-button {
+    background-color: black;
+    cursor: pointer;
 }
 
 .image-container a:hover {
     border: 3px solid mediumpurple;
-    cursor: pointer;
 }
 
 .details {
-    position: absolute;
     display: none;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-    background-color: lightgray;
-    padding: 10px;
-    text-align: center;
+    color: mediumpurple;
 }
