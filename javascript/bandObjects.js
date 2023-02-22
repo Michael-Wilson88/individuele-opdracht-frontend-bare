@@ -91,7 +91,7 @@ const kingGizzard = new Band(
     "King Gizzard and the Lizard Wizard",
     "Melbourne, Australia",
     "Psychedelic Rock",
-    "../img/KGLW-Logo-02.svg",
+    "../img/KingGizzard.jpg",
     [
         {"name": "The River"},
         {"name": "Gamma Knife"}

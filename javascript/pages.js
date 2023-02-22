@@ -61,8 +61,17 @@ function populateDetails(bandIndex) {
   `;
 }
 
+let sortAscending = true; // initialize the sort order to ascending
+
+
+function handleSort() {
+    sortAscending = !sortAscending; // toggle the sort order
+    displayBands(1, sortAscending); // display the first page with the new sort order
+    updateNavbar(1, Math.ceil(sortedBands.length / PAGE_SIZE), sortAscending); // update the navbar with the new sort order
+}
+
 // Function to update the page links in the navbar
-function updateNavbar(pageNumber, pageCount) {
+function updateNavbar(pageNumber, pageCount, sortAscending) {
     navbar.innerHTML = "";
     for (let i = 1; i <= pageCount; i++) {
         const link = document.createElement("a");
@@ -74,7 +83,7 @@ function updateNavbar(pageNumber, pageCount) {
         link.addEventListener("click", (event) => {
             event.preventDefault();
             displayBands(i, sortAscending);
-            updateNavbar(i, pageCount);
+            updateNavbar(i, pageCount, sortAscending);
         });
         const li = document.createElement("li");
         li.appendChild(link);
@@ -82,16 +91,11 @@ function updateNavbar(pageNumber, pageCount) {
     }
 }
 
-// Function to handle sorting
-function handleSort() {
-    const sortSelect = document.getElementById("sort-select");
-    const sortAscending = sortSelect.value === "asc";
-    displayBands(1, sortAscending);
-    updateNavbar(1, Math.ceil(sortedBands.length / PAGE_SIZE));
-}
-
 // Add an event listener to the sort select element
-// document.getElementById("sort-select").addEventListener("change", handleSort);
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("sort-select").addEventListener("change", handleSort);
+});
+
 
 // Initialize the page with the default sort order and page number
 displayBands(1, true);
